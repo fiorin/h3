@@ -364,11 +364,11 @@ var heroes = [
     },
     {
         name: 'roan',
-        faction: 'cove',      
-        class: 'overlord',
+        faction: 'stronghold',      
+        class: 'barbarian',
         secondary: [{
-            type: 'resistance',level: 'basic'},{
-            type: 'armorer',level: 'basic'
+            type: 'offence',level: 'basic'},{
+            type: 'resistance',level: 'basic'
         }],
         project: 'VCMI'
     },
@@ -408,7 +408,7 @@ var heroes = [
         class: 'alchemist',
         secondary: [{
             type: 'ballistics',level: 'basic'},{
-            type: 'armorer',level: 'basic'
+            type: 'artillery',level: 'basic'
         }],
         project: 'VCMI'
     },
