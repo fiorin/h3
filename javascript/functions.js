@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded',function(){
     var html = []
     var hero, secondary;
+    heroes.sort(function(a, b) {
+        return a.faction+a.class > b.faction+b.class;
+    });
     for (index in heroes) {
         hero = heroes[index]
         html += '<tr><td class="text-capitalize">'+hero.name+'<br/><small class="text-secondary text-capitalize">'+hero.class+'</small></td>'
@@ -34,7 +37,7 @@ var heroes = [
     {
         name: 'elena',
         faction: 'castle',      
-        class: '',
+        class: 'knight',
         secondary: [{
             type: 'leadership',level: 'basic'},{
             type: 'tactics',level: 'basic'
@@ -44,7 +47,7 @@ var heroes = [
     {
         name: 'richard',
         faction: 'castle',     
-        class: '',
+        class: 'knight',
         secondary: [{
             type: 'states',level: 'basic'},{
             type: 'luck',level: 'basic'
@@ -52,19 +55,19 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '16',
-        faction: 'Castle',    
-        class: '',
+        name: 'melchert',
+        faction: 'tower',    
+        class: 'mage',
         secondary: [{
-            type: 'leadership',level: 'basic'},{
+            type: 'wisdom',level: 'basic'},{
             type: 'necromancy',level: 'basic'
         }],
         project: 'VCMI'
     },
     {
-        name: 'h1',
-        faction: 'rampart',    
-        class: '',
+        name: 'balor',
+        faction: 'ruins',    
+        class: 'hermit',
         secondary: [{
             type: 'pathfinding',level: 'advanced'
         }],
@@ -73,7 +76,7 @@ var heroes = [
     {
         name: 'baltasar',
         faction: 'fortress',     
-        class: '',
+        class: 'beastmaster',
         secondary: [{
             type: 'logistics',level: 'basic'},{
             type: 'artillery',level: 'basic'
@@ -81,29 +84,19 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '6',
+        name: 'bart',
         faction: 'cove',       
-        class: '',
+        class: 'navigator',
         secondary: [{
             type: 'scholar',level: 'basic'},{
-            type: 'scouting',level: 'basic'
+            type: 'learning',level: 'basic'
         }],
         project: 'VCMI'
     },
     {
-        name: '2',
+        name: 'edward',
         faction: 'cove',     
-        class: '',
-        secondary: [{
-            type: 'navigation',level: 'basic'},{
-            type: 'artillery',level: 'basic'
-        }],
-        project: 'VCMI'
-    },
-    {
-        name: 'marian',
-        faction: 'cove',     
-        class: '',
+        class: 'captain',
         secondary: [{
             type: 'navigation',level: 'basic'},{
             type: 'tactics',level: 'basic'
@@ -111,9 +104,19 @@ var heroes = [
         project: 'VCMI'
     },
     {
+        name: 'marian',
+        faction: 'cove',     
+        class: 'captain',
+        secondary: [{
+            type: 'navigation',level: 'basic'},{
+            type: 'diplomacy',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
         name: 'lucius',
         faction: 'inferno',   
-        class: '',
+        class: 'demoniac',
         secondary: [{
             type: 'leadership',level: 'basic'},{
             type: 'resistance',level: 'basic'
@@ -121,19 +124,19 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '18',
+        name: 'lilith',
         faction: 'inferno',    
-        class: '',
+        class: 'herectic',
         secondary: [{
             type: 'wisdom',level: 'basic'},{
-            type: 'fireMagic',level: 'basic'
+            type: 'firemagic',level: 'basic'
         }],
         project: 'VCMI'
     },
     {
-        name: '14',
+        name: 'rurik',
         faction: 'tower',       
-        class: '',
+        class: 'alchemist',
         secondary: [{
             type: 'states',level: 'basic'},{
             type: 'armorer',level: 'basic'
@@ -141,9 +144,9 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '15',
+        name: 'hycis',
         faction: 'dungeon',   
-        class: '',
+        class: 'overlord',
         secondary: [{
             type: 'states',level: 'basic'},{
             type: 'eagleeye',level: 'basic'
@@ -153,17 +156,17 @@ var heroes = [
     {
         name: 'caesar',
         faction: 'cove',      
-        class: '',
+        class: 'captain',
         secondary: [{
             type: 'offence',level: 'basic'},{
-            type: 'scouting',level: 'basic'
+            type: 'artillery',level: 'basic'
         }],
         project: 'VCMI'
     },
     {
-        name: '10',
+        name: 'bomoh',
         faction: 'fortress',   
-        class: '',
+        class: 'beastmaster',
         secondary: [{
             type: 'mysticism',level: 'basic'},{
             type: 'firstaid',level: 'basic'
@@ -173,17 +176,17 @@ var heroes = [
     {
         name: 'eordan',
         faction: 'conflux',       
-        class: '',
+        class: 'elementalist',
         secondary: [{
             type: 'armorer',level: 'basic'},{
-            type: 'earthMagic',level: 'basic'
+            type: 'earthmagic',level: 'basic'
         }],
         project: 'VCMI'
     },
     {
-        name: '7',
+        name: 'tuuk',
         faction: 'stronghold', 
-        class: '',
+        class: 'barbarian',
         secondary: [{
             type: 'luck',level: 'basic'},{
             type: 'pathfinding',level: 'basic'
@@ -193,7 +196,7 @@ var heroes = [
     {
         name: 'mogh',
         faction: 'ruins',      
-        class: '',
+        class: 'hermit',
         secondary: [{
             type: 'earthmagic',level: 'expert'},{
             type: 'intelligence',level: 'basic'
@@ -203,7 +206,7 @@ var heroes = [
     {
         name: 'horae',
         faction: 'ruins',      
-        class: '',
+        class: 'hermit',
         secondary: [{
             type: 'earthmagic',level: 'basic'},{
             type: 'ballistics',level: 'basic'
@@ -213,8 +216,9 @@ var heroes = [
     {
         name: 'mabon',
         faction: 'ruins',       
-        class: '',
+        class: 'hermit',
         secondary: [{
+            type: 'wisdom',level: 'basic'},{
             type: 'luck',level: 'basic'
         }],
         project: 'VCMI'
@@ -240,22 +244,22 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '3',
+        name: 'damys',
         faction: 'rampart',   
         class: 'ranger',
         secondary: [{
-            type: 'pathfinding',level: 'basic'},{
+            type: 'archery',level: 'basic'},{
             type: 'tactics',level: 'basic'
         }],
         project: 'VCMI'
     },
     {
-        name: '5',
+        name: 'laurens',
         faction: 'neutral',  
         class: 'merchant',
         secondary: [{
-            type: 'states',level: 'basic'},{
-            type: 'logistics',level: 'basic'
+            type: 'logistics',level: 'expert'},{
+            type: 'states',level: 'basic'
         }],
         project: 'VCMI'
     },
@@ -269,17 +273,17 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '13',
+        name: 'elrin',
         faction: 'rampart',   
         class: 'ranger',
         secondary: [{
             type: 'archery',level: 'basic'},{
-            type: 'pathfinding',level: 'basic'
+            type: 'scholar',level: 'basic'
         }],
         project: 'VCMI'
     },
     {
-        name: '19',
+        name: 'viktorya',
         faction: 'tower',   
         class: 'alchemist',
         secondary: [{
@@ -289,16 +293,17 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '20',
+        name: 'brinn',
         faction: 'rampart',   
         class: 'druid',
         secondary: [{
-            type: 'diplomacy',level: 'advanced'
+            type: 'pathfinding',level: 'basic'},{
+            type: 'diplomacy',level: 'basic'
         }],
         project: 'VCMI'
     },
     {
-        name: '22',
+        name: 'ravi',
         faction: 'necropolis',      
         class: 'necromancer',
         secondary: [{
@@ -308,7 +313,7 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '24',
+        name: 'leon',
         faction: 'necropolis',  
         class: 'death knight',
         secondary: [{
@@ -318,9 +323,9 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '25',
+        name: 'lydia',
         faction: 'fortress',   
-        class: '',
+        class: 'witch',
         secondary: [{
             type: 'wisdom',level: 'basic'},{
             type: 'mysticism',level: 'basic'
@@ -328,12 +333,82 @@ var heroes = [
         project: 'VCMI'
     },
     {
-        name: '26',
+        name: 'goes',
         faction: 'fortress',      
-        class: '',
+        class: 'beastmaster',
         secondary: [{
-            type: 'scouting',level: 'basic'},{
-            type: 'logistics',level: 'basic'
+            type: 'navigation',level: 'basic'},{
+            type: 'pathfinding',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'stanley',
+        faction: 'necropolis',      
+        class: 'deathknight',
+        secondary: [{
+            type: 'necromancy',level: 'basic'},{
+            type: 'archery',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'renaud',
+        faction: 'neutral',      
+        class: 'merchant',
+        secondary: [{
+            type: 'logistics',level: 'basic'},{
+            type: 'diplomacy',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'roan',
+        faction: 'cove',      
+        class: 'overlord',
+        secondary: [{
+            type: 'resistance',level: 'basic'},{
+            type: 'armorer',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'giacomo',
+        faction: 'neutral',      
+        class: 'merchant',
+        secondary: [{
+            type: 'logistics',level: 'basic'},{
+            type: 'intelligence',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'martin',
+        faction: 'castle',      
+        class: 'knight',
+        secondary: [{
+            type: 'armorer',level: 'basic'},{
+            type: 'leadership',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'francis',
+        faction: 'necropolis',      
+        class: 'deathknight',
+        secondary: [{
+            type: 'necromancy',level: 'basic'},{
+            type: 'armorer',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'henrik',
+        faction: 'tower',      
+        class: 'alchemist',
+        secondary: [{
+            type: 'ballistics',level: 'basic'},{
+            type: 'armorer',level: 'basic'
         }],
         project: 'VCMI'
     },
