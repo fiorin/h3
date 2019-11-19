@@ -570,6 +570,116 @@ var heroes = [
         }],
         project: 'VCMI'
     },
+    {
+        name: 'theresa',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'diana',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'marcus',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'ferri',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'joan',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'kenshin',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'milena',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'prospero',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'samuel',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'thomas',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
+    {
+        name: 'yaxi',
+        faction: 'neutral',      
+        class: '?',
+        secondary: [{
+            type: 'wisdom',level: 'basic'},{
+            type: 'wisdom',level: 'basic'
+        }],
+        project: 'VCMI'
+    },
     /* {
         name: ,
         faction: ,
